@@ -1,5 +1,7 @@
 
 import './App.css';
+import Details from './components/Details';
+
 
 function App() {
   return (
@@ -7,6 +9,7 @@ function App() {
       <div className="container">
         <h1>Bio Generator</h1>
       </div>
+      <Details/>
     </div>
   );
 }

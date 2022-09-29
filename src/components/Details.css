@@ -1,0 +1,9 @@
+.details{
+    background-color: aquamarine;
+    display: flex;
+    color: blue;
+}
+.details_cont{
+    display:flex;
+    top:300px
+}
