@@ -1,10 +1,32 @@
 import React from "react"
 import './Result.css';
 
-function Result(){
+const Result=(props)=>{
+    const {
+        name,
+        gender,
+        location,
+        isLocation,
+        school,
+        isSchool,
+        major,
+        occupation,
+        isOccupation,
+        religious,
+        isReligious,
+        reason,
+        isReason
+    }=props;
     return (
         <div className="Result_cont">
-           <h1>Result</h1>
+           <h2>Result</h2>
+           <div>
+            {isLocation&&<span>{`${name}`} is from {`${location}`}.</span>}
+            {isSchool&&<span>{gender==="Female" ? 'She' : 'He' } is  {`${major}`} from {`${school}`}.</span>}
+            {isOccupation&&<span>{gender==="Female"?'She':'He'} currently doing as a {`${occupation}`}.</span>}
+            {isReligious&&<span>{gender==="Female" ? 'She' : 'He'} raised {`${religious}`}.</span>}
+            {isReason&&<span>{gender==="Female" ? "She" : "he"} {`${reason}`}.</span>}
+           </div>
         </div>
        
 
