@@ -4,7 +4,7 @@ import './Options.css';
 function Options(){
     return (
         <div className="Options_Cont">
-           <h1>Options</h1>
+           <h2>Options</h2>
            <div className="form_data">
                 <label htmlFor="">Name</label>
                 <input type="text"  placeholder="Enter Name"/>
