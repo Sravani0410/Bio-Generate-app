@@ -1,6 +1,18 @@
 .Options_Cont{
-    width:60%;
-    height:900px;
-    background-color: rgb(189,198,193);
-    margin-top: 10px;
+   
+  
+    border-radius: 0;
+    max-width: 600px;
+    margin-top: 80px;
+    width: 600px;
+    
+}
+
+.form_data{
+    padding: 1rem;
+  margin: 1rem;
+  background-color: #2223;
+  border-radius: 0;
+  backdrop-filter: blur(15px);
+  
 }
