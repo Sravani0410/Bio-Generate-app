@@ -1,5 +1,12 @@
 import React from "react"
 import './Options.css';
+import {Name}from "../Data/name"
+import {Location}from "../Data/location"
+import { School } from "../Data/school";
+import { Major } from "../Data/major";
+import { Occupation } from "../Data/occupation";
+import { Religious } from "../Data/religious";
+import { Reason } from "../Data/reason";
 
 const Options=(data)=>{
     const {
@@ -70,6 +77,68 @@ const Options=(data)=>{
         e.preventDefault();
         setReason(e.target.value)
     }
+
+
+    function randomInterval(min,max){
+        return Math.floor(Math.random()*(max-min+1)+min);
+    }
+
+    const random=randomInterval(1,1000)
+
+const handleRandomName=()=>{
+    return Name.map((el)=>{
+        if(random===el.id){
+            setName(el.first_name+" "+el.last_name);
+            setGender(el.gender);
+        }
+    })
+}
+const handleRandomLocation=()=>{
+    return Location.map((el)=>{
+        if(random===el.id){
+            setLocation(el.location)
+        }
+    })
+}
+const handleRandomSchool=()=>{
+    return School.map((el)=>{
+        if(random===el.id){
+            setSchool(el.school)
+        }
+    })
+}
+
+const handleRandomMajor=()=>{
+    return Major.map((el)=>{
+        if(random===el.id){
+            setMajor(el.major)
+        }
+    })
+}
+const handleRandomOccupation=()=>{
+    return Occupation.map((el)=>{
+        if(random===el.id){
+            setOccupation(el.occupation)
+        }
+    })
+}
+const handleRandomReligious=()=>{
+    return Religious.map((el)=>{
+        if(random===el.id){
+            setReligious(el.religious)
+        }
+    })
+}
+
+const handleRandomReason=()=>{
+    return Reason.map((el)=>{
+        if(random===el.id){
+            setReason(el.reason)
+        }
+    })
+}
+
+
     return (
         <div className="Options_Cont">
            <h2>Options</h2>
@@ -86,7 +155,7 @@ const Options=(data)=>{
                     <option>Female</option>
                     <option>Male</option>
                 </select>
-                <button>Random Name</button>
+                <button onClick={ handleRandomName}>Random Name</button>
            </div>
            <div className="form_data">
                <input type="checkbox" 
@@ -99,7 +168,7 @@ const Options=(data)=>{
                onChange={handleLocation}
                value={location}
                />
-               <button>Random Location</button>
+               <button onClick={handleRandomLocation}>Random Location</button>
            </div>
            <div className="form_data">
                 <input type="checkbox" 
@@ -112,14 +181,14 @@ const Options=(data)=>{
                 onChange={handleSchool}
                 value={school}
                 />
-                <button>Random School</button>
+                <button onClick={handleRandomSchool}>Random School</button>
                 <br />
                 <label for="major">Major</label>
                 <input type="text" 
                 onChange={handleMajor}
                 value={major}
                 />
-                <button>Random Major</button>
+                <button onClick={handleRandomMajor}>Random Major</button>
            </div>
            <div className="form_data">
                 <input type="checkbox" 
@@ -131,7 +200,7 @@ const Options=(data)=>{
                 onChange={handleOccupation}
                 value={occupation}
                 />
-                <button>Random Occupation</button>
+                <button onClick={handleRandomOccupation}>Random Occupation</button>
            </div>
            <div className="form_data">
                <label for="religious"><input type="checkbox" 
@@ -142,7 +211,7 @@ const Options=(data)=>{
                onChange={handleReligious}
                value={religious}
                ></textarea>
-               <button>Random text</button>
+               <button onClick={handleRandomReligious}>Random text</button>
            </div>
            <div className="form_data">
                <label for="desire"><input type="checkbox"
@@ -156,12 +225,12 @@ const Options=(data)=>{
                onChange={handleReason}
                value={reason}
                ></textarea>
-               <button>Restoration</button>
-               <button>Plan of Salvation</button>
-               <button>Gospel of Christ</button>
-               <button>Law of Chastity</button>
-               <button>Word of Wisdom</button>
-               <button>Any Lesson</button>
+               <button onClick={handleRandomReason}>Restoration</button>
+               <button onClick={handleRandomReason}>Plan of Salvation</button>
+               <button onClick={handleRandomReason}>Gospel of Christ</button>
+               <button onClick={handleRandomReason}>Law of Chastity</button>
+               <button onClick={handleRandomReason}>Word of Wisdom</button>
+               <button onClick={handleRandomReason}>Any Lesson</button>
            </div>
           
         </div>

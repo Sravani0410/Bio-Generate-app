@@ -1,0 +1,15 @@
+export const Reason = [{ "id": 1, "religionView": "to know if God really does exist and how that affects him" },
+{ "id": 2, "religionView": "hopes that the missionaries can help he/she grow a relationship with God" },
+{ "id": 3, "religionView": "is looking for a church to attend" },
+{ "id": 4, "religionView": "was recently diagnosed with cancer. When he/she find out about the cancer,he/she went to his for help. The pastor told him that it was a result of God being displeased with him. Fortunately, he will likely recover from the cancer, but this experience caused him to visit several other churches of different faiths, but none of them have felt right yet" },
+{ "id": 5, "religionView": "looking to grow closer to God and to know that God knows him, listens to him, and cares about him and his family" },
+{ "id": 6, "religionView": "wants to learn more about what makes the Church of Jesus Christ of Latter-day Saints different from other Christian churches" },
+{ "id": 7, "religionView": "likes reading the Bible and talking about it" },
+{ "id": 8, "religionView": "has been questioning whether God exists and would like a fresh perspective" },
+{ "id": 9, "religionView": "wants to learn more about what makes the Church of Jesus Christ of Latter-day Saints different from other Christian churches" },
+{ "id": 10, "religionView": "recieved a priesthood blessing from a friend and now he/she wants to learn more" },
+{ "id": 11, "religionView": "is having a difficult time in life and is looking for ways to find greater peace, joy, and purpose in life" },
+{ "id": 12, "religionView": "has recently lost a loved one, and is looking for ways to find peace during this difficult time" },
+{ "id": 13, 'religionView': 'struggles to understand why bad things happen to good people' },
+{ 'id': 14, 'religionView': 'is looking to develop a more personal relationship with God' }
+]
