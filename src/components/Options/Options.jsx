@@ -118,22 +118,25 @@ const handleRandomMajor=()=>{
 const handleRandomOccupation=()=>{
     return Occupation.map((el)=>{
         if(random===el.id){
-            setOccupation(el.occupation)
+            setOccupation(el.profession)
         }
     })
 }
+// console.log("handleRandomOccupation:",handleRandomOccupation)
 const handleRandomReligious=()=>{
+    let id=randomInterval(1,8);
     return Religious.map((el)=>{
-        if(random===el.id){
-            setReligious(el.religious)
+        if(id===el.id){
+            setReligious(el.religionView)
         }
     })
 }
 
 const handleRandomReason=()=>{
+    let id=randomInterval(1,14)
     return Reason.map((el)=>{
-        if(random===el.id){
-            setReason(el.reason)
+        if(id==el.id){
+            setReason(el.religionView)
         }
     })
 }
