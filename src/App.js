@@ -1,8 +1,7 @@
 
 import './App.css';
 import Details from './components/Details';
-import { Translate } from './components/Translate';
-
+import {Translate} from "./components/Translate"
 
 function App() {
   return (

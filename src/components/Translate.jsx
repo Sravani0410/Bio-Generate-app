@@ -1,13 +1,10 @@
 export const Translate=()=>{
-    let GoogleTranslate=()=>{
-        new window.google.translate.TranslateElement({
-            pageLanguage: 'en',
-            autoDisplay:true,
-        },"translate")
-    }
+    function googleTranslate() {
+        new  window.google.translate.TranslateElement({pageLanguage: 'en'}, 'translate');
+      }
     var data=document.createElement("script");
-    data.setAttribute("src","//translate.google.com/translate_a/element.js?cb=GoogleTranslate");
+    data.setAttribute("src","//translate.google.com/translate_a/element.js?cb=googleTranslate");
     document.body.appendChild(data);
-    window.GoogleTranslate=GoogleTranslate;
+    window.googleTranslate=googleTranslate
     return <div id="translate"></div>
 }
