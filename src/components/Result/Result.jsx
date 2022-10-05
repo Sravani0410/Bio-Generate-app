@@ -19,8 +19,8 @@ const Result=(props)=>{
     }=props;
     return (
         <div className="Result_cont">
-           <h2>Result</h2>
-           <div>
+           <h2 className="result">Result</h2>
+           <div style={{fontSize:'22px'}} className="res">
             {isLocation&&<span>{`${name}`} is from {`${location}`}.</span>}
             {isSchool&&<span>{gender==="Female" ? 'She' : 'He' } is  {`${major}`} from {`${school}`}.</span>}
             {isOccupation&&<span>{gender==="Female"?'She':'He'} currently doing as a {`${occupation}`}.</span>}

@@ -1,14 +1,16 @@
 
 import './App.css';
 import Details from './components/Details';
+import { Translate } from './components/Translate';
 
 
 function App() {
   return (
     <>
-      <div className="container">
-        <h1>Bio Generator</h1>
-      </div>
+      
+        <h1 className="container">Bio Generator</h1>
+      
+      <p><Translate/></p>
       <Details/>
     </>
   );
