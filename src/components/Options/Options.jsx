@@ -1,5 +1,6 @@
 import React from "react"
 import './Options.css';
+import { Images } from "../Data/images";
 import {Name}from "../Data/name"
 import {Location}from "../Data/location"
 import { School } from "../Data/school";
@@ -10,6 +11,7 @@ import { Reason } from "../Data/reason";
 
 const Options=(data)=>{
     const {
+        
         name,
         setName,
         gender,
@@ -38,6 +40,7 @@ const Options=(data)=>{
         setIsReason,
     } = data;
 
+   
     const handleName = (e) => {
         e.preventDefault();
         setName(e.target.value);
@@ -85,6 +88,7 @@ const Options=(data)=>{
 
     const random=randomInterval(1,1000)
 
+    
 const handleRandomName=()=>{
     return Name.map((el)=>{
         if(random===el.id){
@@ -145,6 +149,7 @@ const handleRandomReason=()=>{
     return (
         <div className="Options_Cont">
            <h2>Options</h2>
+          
            <div className="form_data">
                 <label for="person-name-textbox">Name</label>
                 <input

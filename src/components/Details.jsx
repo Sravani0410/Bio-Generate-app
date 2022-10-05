@@ -3,9 +3,11 @@ import Options from "./Options/Options"
 import Result from "./Result/Result"
 
 import './Details.css';
+import img from "./Data/image/img1.jpeg"
 
 function Details(){
-    
+   const[photo,setPhoto]=useState(img)   
+
     const [name,setName]=useState("Sravani Sandhya Devi Pyla");
 
     const [gender,setGender]=useState("Female");
@@ -30,8 +32,11 @@ function Details(){
     return (
         
         <div className="details_cont">
+            
             <div className="details">
+                
                 <Options
+                
                 name={name}
                 setName={setName}
 
@@ -70,6 +75,9 @@ function Details(){
 
                 />
                 <Result
+                photo={photo}
+                setPhoto={setPhoto}
+
                  name={name}
                  setName={setName}
  
