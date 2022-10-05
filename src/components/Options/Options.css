@@ -1,18 +1,41 @@
 .Options_Cont{
-   
-  
-    border-radius: 0;
+   border-radius: 0;
     max-width: 600px;
     margin-top: 80px;
     width: 600px;
-    
 }
-
+h2{
+  text-align: center;
+  padding: 1rem;
+  backdrop-filter: blur(15px);
+  background-color: #2223;
+  color: #222;
+}
 .form_data{
     padding: 1rem;
-  margin: 1rem;
+  /* margin: 1rem; */
   background-color: #2223;
   border-radius: 0;
   backdrop-filter: blur(15px);
-  
+  margin:0px;
+}
+.Options_Cont>div{
+  margin-bottom: 20px;
+}
+label{
+  vertical-align: middle;
+  margin-right: auto;
+  margin: 3px;
+  margin-bottom: 6px;
+}
+input[type="text" i] {
+  padding: 1px 2px;
+  background-color: #fff7;
+}
+button {
+  padding: 3px;
+  margin: 5px;
+  background-color: #ddd9;
+  border: 1px solid;
+  transition: 0.3s;
 }

@@ -13,7 +13,7 @@ body {
   background-color: rgb(189,198,193);
   height:40px;
   top:0;
-  position:fixed;
+  /* position:fixed; */
 }
 
 h1 {
