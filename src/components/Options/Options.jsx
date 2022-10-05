@@ -228,11 +228,16 @@ const handleRandomReason=()=>{
                onChange={handleReason}
                value={reason}
                ></textarea>
-               <button onClick={handleRandomReason}>Restoration</button>
-               <button onClick={handleRandomReason}>Plan of Salvation</button>
-               <button onClick={handleRandomReason}>Gospel of Christ</button>
-               <button onClick={handleRandomReason}>Law of Chastity</button>
-               <button onClick={handleRandomReason}>Word of Wisdom</button>
+               <button onClick={handleRandomReason}
+               style={{ backgroundColor: "#db9b" }}>Restoration</button>
+               <button onClick={handleRandomReason}
+                style={{ backgroundColor: "#adab" }}>Plan of Salvation</button>
+               <button onClick={handleRandomReason}
+                style={{ backgroundColor: "#aadb" }}>Gospel of Christ</button>
+               <button onClick={handleRandomReason}
+                style={{ backgroundColor: "#eabb" }}>Law of Chastity</button>
+               <button onClick={handleRandomReason}
+               style={{ backgroundColor: "#c9cb" }}>Word of Wisdom</button>
                <button onClick={handleRandomReason}>Any Lesson</button>
            </div>
           
