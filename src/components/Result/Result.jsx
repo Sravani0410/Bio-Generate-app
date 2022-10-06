@@ -4,7 +4,7 @@ import './Result.css';
 const Result=(props)=>{
     const {
         photo,
-        setPhoto,
+        // setPhoto,
         name,
         gender,
         location,

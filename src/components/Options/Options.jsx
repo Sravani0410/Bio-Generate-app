@@ -12,6 +12,7 @@ import { Images } from "../Data/images";
 import img from "../Data/image/img1.jpeg"
 const Options=(data)=>{
     const[photo,setPhoto]=useState(img)
+    console.log(photo)
     const {
         
         name,
