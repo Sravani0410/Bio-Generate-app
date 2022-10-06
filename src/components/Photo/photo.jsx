@@ -38,7 +38,7 @@ export const Photo = ({ photo, setPhoto }) => {
 
 const handleRandomPhoto=(value, setPhoto, min, max)=>{
     let randomNumber = getRandomInt(min, max);
-    return Images.map((el)=>{
+    return Images.forEach((el)=>{
         if(randomNumber===el.id){
             setPhoto(value[randomNumber].image)
         }

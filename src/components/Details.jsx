@@ -36,7 +36,9 @@ function Details(){
             <div className="details">
                 
                 <Options
-                
+                 photo={photo}
+                 setPhoto={setPhoto}
+                 
                 name={name}
                 setName={setName}
 

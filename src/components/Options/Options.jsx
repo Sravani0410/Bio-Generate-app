@@ -1,6 +1,6 @@
-import React from "react"
+import React, { useState } from "react"
 import './Options.css';
-import { Images } from "../Data/images";
+// import { Images } from "../Data/images";
 import {Name}from "../Data/name"
 import {Location}from "../Data/location"
 import { School } from "../Data/school";
@@ -8,8 +8,10 @@ import { Major } from "../Data/major";
 import { Occupation } from "../Data/occupation";
 import { Religious } from "../Data/religious";
 import { Reason } from "../Data/reason";
-
+import { Images } from "../Data/images";
+import img from "../Data/image/img1.jpeg"
 const Options=(data)=>{
+    const[photo,setPhoto]=useState(img)
     const {
         
         name,
@@ -40,7 +42,36 @@ const Options=(data)=>{
         setIsReason,
     } = data;
 
-   
+    const getRandomInt = (min, max) => {
+        min = Math.ceil(min);
+        max = Math.floor(max);
+        return Math.round(Math.random() * (max - min) + min);
+      };
+      let randomPhoto = [
+        {
+          photo:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTip7Jkt7Y8vUdUJ1oxUd-FzIf6rVG-wV4q7FOBHutv&s",
+        },
+        {
+          photo:
+            "https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg?w=2000",
+        },
+        {
+          photo:
+            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQATurGoISfff9EA0KzQhk3rIKZ2UgUG1283iLM-LAq9obYJSGpxn2U1eu07lBtj7nA1yA&usqp=CAU",
+        },
+      ];
+    
+    
+    
+      const handlePhoto = (e) => {
+        const { name, files } = e.target;
+        if (name === "photo") {
+          setPhoto(URL.createObjectURL(files[0]));
+    
+          
+        }
+      };
     const handleName = (e) => {
         e.preventDefault();
         setName(e.target.value);
@@ -90,7 +121,7 @@ const Options=(data)=>{
 
     
 const handleRandomName=()=>{
-    return Name.map((el)=>{
+    return Name.forEach((el)=>{
         if(random===el.id){
             setName(el.first_name+" "+el.last_name);
             setGender(el.gender);
@@ -98,14 +129,14 @@ const handleRandomName=()=>{
     })
 }
 const handleRandomLocation=()=>{
-    return Location.map((el)=>{
+    return Location.forEach((el)=>{
         if(random===el.id){
             setLocation(el.location)
         }
     })
 }
 const handleRandomSchool=()=>{
-    return School.map((el)=>{
+    return School.forEach((el)=>{
         if(random===el.id){
             setSchool(el.school)
         }
@@ -113,14 +144,14 @@ const handleRandomSchool=()=>{
 }
 
 const handleRandomMajor=()=>{
-    return Major.map((el)=>{
+    return Major.forEach((el)=>{
         if(random===el.id){
             setMajor(el.major)
         }
     })
 }
 const handleRandomOccupation=()=>{
-    return Occupation.map((el)=>{
+    return Occupation.forEach((el)=>{
         if(random===el.id){
             setOccupation(el.profession)
         }
@@ -129,7 +160,7 @@ const handleRandomOccupation=()=>{
 // console.log("handleRandomOccupation:",handleRandomOccupation)
 const handleRandomReligious=()=>{
     let id=randomInterval(1,8);
-    return Religious.map((el)=>{
+    return Religious?.forEach((el)=>{
         if(id===el.id){
             setReligious(el.religionView)
         }
@@ -138,18 +169,40 @@ const handleRandomReligious=()=>{
 
 const handleRandomReason=()=>{
     let id=randomInterval(1,14)
-    return Reason.map((el)=>{
-        if(id==el.id){
+    return Reason?.forEach((el)=>{
+        if(id===el.id){
             setReason(el.religionView)
         }
     })
 }
-
+const handleRandomPhoto=(value, setPhoto, min, max)=>{
+    let randomNumber = getRandomInt(min, max);
+    return Images?.forEach((el)=>{
+        if(randomNumber===el.id){
+            setPhoto(value[randomNumber].image)
+        }
+    })
+}
 
     return (
         <div className="Options_Cont">
            <h2>Options</h2>
-          
+           <div className="name">
+      <label className="label1">Photo :</label>
+      <input
+        type="file"
+        name="photo"
+        onChange={handlePhoto}
+        className="image_tag"
+        alt=""
+      />
+      <button
+        onClick={() => handleRandomPhoto(randomPhoto, setPhoto, 0, 2)}
+        className="photobutton"
+      >
+        Random Photo
+      </button>
+    </div>
            <div className="form_data">
                 <label for="person-name-textbox">Name</label>
                 <input
