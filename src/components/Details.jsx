@@ -3,7 +3,7 @@ import Options from "./Options/Options"
 import Result from "./Result/Result"
 
 import './Details.css';
-import img from "./Data/image/img1.jpeg"
+import img from "./Data/image/img1.png"
 
 function Details(){
    const[photo,setPhoto]=useState(img)   
@@ -38,7 +38,7 @@ function Details(){
                 <Options
                  photo={photo}
                  setPhoto={setPhoto}
-                 
+
                 name={name}
                 setName={setName}
 

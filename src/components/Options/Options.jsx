@@ -9,7 +9,7 @@ import { Occupation } from "../Data/occupation";
 import { Religious } from "../Data/religious";
 import { Reason } from "../Data/reason";
 import { Images } from "../Data/images";
-import img from "../Data/image/img1.jpeg"
+import img from "../Data/image/img1.png"
 const Options=(data)=>{
     const[photo,setPhoto]=useState(img)
     console.log(photo)
@@ -48,30 +48,11 @@ const Options=(data)=>{
         max = Math.floor(max);
         return Math.round(Math.random() * (max - min) + min);
       };
-      let randomPhoto = [
-        {
-          photo:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTip7Jkt7Y8vUdUJ1oxUd-FzIf6rVG-wV4q7FOBHutv&s",
-        },
-        {
-          photo:
-            "https://img.freepik.com/free-photo/pretty-smiling-joyfully-female-with-fair-hair-dressed-casually-looking-with-satisfaction_176420-15187.jpg?w=2000",
-        },
-        {
-          photo:
-            "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQATurGoISfff9EA0KzQhk3rIKZ2UgUG1283iLM-LAq9obYJSGpxn2U1eu07lBtj7nA1yA&usqp=CAU",
-        },
-      ];
-    
     
     
       const handlePhoto = (e) => {
-        const { name, files } = e.target;
-        if (name === "photo") {
-          setPhoto(URL.createObjectURL(files[0]));
-    
-          
-        }
+        e.preventDefault()
+        setPhoto(e.target.value)
       };
     const handleName = (e) => {
         e.preventDefault();
@@ -197,12 +178,14 @@ const handleRandomPhoto=(value, setPhoto, min, max)=>{
         className="image_tag"
         alt=""
       />
-      <button
+      <button onClick={handleRandomPhoto}>Random Photo</button>
+      {/* <button
+       
         onClick={() => handleRandomPhoto(randomPhoto, setPhoto, 0, 2)}
         className="photobutton"
       >
         Random Photo
-      </button>
+      </button> */}
     </div>
            <div className="form_data">
                 <label for="person-name-textbox">Name</label>

@@ -23,5 +23,6 @@
   margin-bottom:20px;
 }
 .image_tag {
-  width: 30%;
-}
+    width: 30%;
+    margin-left: 140px;
+  }
