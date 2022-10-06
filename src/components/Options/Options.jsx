@@ -9,7 +9,7 @@ import { Occupation } from "../Data/occupation";
 import { Religious } from "../Data/religious";
 import { Reason } from "../Data/reason";
 import { Images } from "../Data/images";
-import img from "../Data/image/img1.png"
+import img from "../Data/image/img1.jpeg"
 const Options=(data)=>{
     const[photo,setPhoto]=useState(img)
     console.log(photo)

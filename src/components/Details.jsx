@@ -3,7 +3,7 @@ import Options from "./Options/Options"
 import Result from "./Result/Result"
 
 import './Details.css';
-import img from "./Data/image/img1.png"
+import img from "./Data/image/img1.jpeg"
 
 function Details(){
    const[photo,setPhoto]=useState(img)   
